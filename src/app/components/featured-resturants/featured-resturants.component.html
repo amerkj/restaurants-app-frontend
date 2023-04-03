@@ -1,0 +1,16 @@
+
+<div class="section featured-section">
+  <h2 class="section-title">Featured</h2>
+  <div class="featured-cards-wrapper">
+    <div
+      *ngFor="let featured of featuredResturants"
+      class="featured-card"
+      [ngStyle]="{'background-image': 'url(' + featured.image + ')'}"
+    >
+      <div class="featured-card-overlay"></div>
+      <h3 class="featured-card-title">{{featured.name}}</h3>
+      <div class="featured-card-text">{{featured.restaurantCount }} resturants</div>
+    </div>
+  
+  </div>
+</div>

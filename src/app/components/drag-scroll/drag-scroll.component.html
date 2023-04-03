@@ -1,0 +1,9 @@
+<div
+  [ngClass]="['drag-slider-wrapper', className]"
+  (mousedown)="mouseDown"
+  (mouseup)="mouseUp"
+  (mousemove)="mouseMove"
+  (mouseleave)="mouseLeave"
+>
+  <ng-content></ng-content>
+</div>

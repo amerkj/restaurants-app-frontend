@@ -1,0 +1,15 @@
+<div class="radio-picker">
+  <button (click)="select(null)" [ngClass]="{ button: true, 'button-primary': !selectedChoice }">
+    Show All, I’m Flexible
+  </button>
+  <button
+    (click)="select(choice)"
+    *ngFor="let choice of choices"
+    [ngClass]="{
+      button: true,
+      'button-primary': selectedChoice && selectedChoice.id === choice.id
+    }"
+  >
+    {{ choice.name }}
+  </button>
+</div>

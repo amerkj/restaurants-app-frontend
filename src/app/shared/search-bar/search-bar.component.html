@@ -1,0 +1,24 @@
+<div class="search-bar">
+  <i class="icon icon-search"></i>
+  <input
+    [ngModel]="searchText" (ngModelChange)="searchTextChanged.emit($event)" 
+    placeholder="Search for any resturant"
+    class="text-field"
+    type="text"
+  />
+  <div class="delimeter"></div>
+  <select
+    [ngModel]="selectedAddress"
+    (ngModelChange)="searchAddressChanged.emit($event)"
+    class="select-field"
+  >
+    <option disabled value="">Select location to search</option>
+    <option value="Jumeirah Dubai">Jumeirah Dubai</option>
+    <option value="Jumeirah Beach Residence Dubai">
+      Jumeirah Beach Residence Dubai
+    </option>
+    <option value="Sport City Dibai">Sport City Dibai</option>
+    <option value="Production City Dubai">Production City Dubai</option>
+  </select>
+  <i class="icon icon-location"></i>
+</div>

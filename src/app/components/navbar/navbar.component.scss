@@ -1,0 +1,16 @@
+
+.navbar {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    justify-content: space-between;
+    padding: 20px;
+    background: transparent linear-gradient(180deg, #201A2D 0%, #201A2D7C 51%, #201A2D00 100%) 0% 0% no-repeat padding-box;
+  }
+
+  .dropdown-toggle::after {
+    display:none;
+}
+  

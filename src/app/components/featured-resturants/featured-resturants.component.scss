@@ -1,0 +1,49 @@
+
+.featured-cards-wrapper {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 700px;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .featured-card {
+    cursor: pointer;
+    color: white;
+    width: 220px;
+    height: 220px;
+    background-size: contain;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    padding-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+  
+    &-overlay {
+      background: transparent linear-gradient(180deg, #00034A00 0%, #030045AF 100%) 0% 0% no-repeat padding-box;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+  
+    &-title {
+      font-weight: 700;
+      font-size: 20px;
+      z-index: 2;
+  
+    }
+  
+    &-text {
+      z-index: 2;
+    }
+  
+  }
+  

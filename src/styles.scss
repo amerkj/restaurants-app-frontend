@@ -1,0 +1,102 @@
+@import "../node_modules/bootstrap/scss/functions"; // required
+@import "../node_modules/bootstrap/scss/variables";
+@import './variables';
+
+$theme-colors: (
+  "primary": #E92051,
+);
+
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+
+.section {
+  padding: 30px 100px 50px 100px;
+
+  &-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  width: 100%;
+}
+
+.ads-scroll {
+  height: 400px;
+  display: flex;
+  overflow-x: scroll;
+  gap: 10px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  .ads-item {
+    border-radius: 10px;
+  }
+}
+
+.featured-section {
+  background-color: #F5F9FF;
+}
+
+.section-explore {
+  background-color: #FFF5F5;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  background-size: contain;  
+  background-repeat: no-repeat;
+}
+
+.icon-search {
+  background-image: url('/assets/icons/search.svg');
+}
+
+.icon-location {
+  background-image: url('/assets/icons/location.svg');
+}
+
+.button {
+  background-color: white;
+  &-primary {
+    color: white;
+    cursor: pointer;
+    background-color: #E92051
+  }
+  &-lg {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  border-radius: 7px;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+}
+
+.spacer {
+  margin-bottom: 30px;
+}
+
+.circle-green {
+  width: 12px;
+  height: 12px;
+  background-color: #36D83C;
+  border-radius: 50%;
+}
+
+.circle-grey {
+  width: 12px;
+  height: 12px;
+  background-color: #999;
+  border-radius: 50%;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

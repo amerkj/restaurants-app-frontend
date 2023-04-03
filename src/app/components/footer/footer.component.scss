@@ -1,0 +1,21 @@
+
+
+.footer {
+    background-color: #201A2D;
+    padding-top: 50px;
+    color: white;
+    display: flex;
+    gap: 120px;
+    flex-wrap: wrap;
+  
+    &-menue{
+      font-weight: 300;
+      font-size: 14px;
+      &-title {
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  

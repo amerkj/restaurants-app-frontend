@@ -1,0 +1,64 @@
+<div class="section section-explore">
+  <div class="section-title">
+    <div>Explore Resturants</div>
+    <div style="font-weight: 400; font-size: 14px">
+      Here's our fine resturants collection, Enjoy!
+    </div>
+  </div>
+
+  <div *ngIf="isLogedIn">
+    <div class="search-block">
+      <app-search-bar
+        (searchTextChanged)="searchText = $event"
+        (searchAddressChanged)="searchAddress = $event"
+      ></app-search-bar>
+      <button (click)="search()" class="button button-primary button-lg">
+        search
+      </button>
+    </div>
+
+    <div class="spacer"></div>
+    <div class="categories">
+      <div class="categories-title">Cuisines Categories</div>
+      <div class="categories-wrapper">
+        <app-radio-picker
+          [choices]="cuisines"
+          (selected)="cuisineChanged($event)"
+        ></app-radio-picker>
+      </div>
+    </div>
+  </div>
+  <div class="spacer"></div>
+  <div class="resturants-wrapper">
+    <div *ngFor="let resturant of resturants" class="resturant-card">
+      <div
+        class="resturant-card-img"
+        [ngStyle]="{ 'background-image': 'url(' + resturant.image + ')' }"
+      ></div>
+      <div class="resturant-card-footer">
+        <div class="d-flex justify-content-between">
+          <div class="resturant-name">
+            <strong>{{ resturant.name }}</strong>
+          </div>
+          <div
+            [ngClass]="{
+              'resturant-card-status': true,
+              offline: !resturant.online
+            }"
+          >
+            <div class="text">
+              {{ resturant.online ? "Online" : "Offline" }}
+            </div>
+            <div
+              [ngClass]="{
+                'circle-green': resturant.online,
+                'circle-grey': !resturant.online
+              }"
+            ></div>
+          </div>
+        </div>
+        <div class="resturant-desc">{{ resturant.address }}</div>
+      </div>
+    </div>
+  </div>
+</div>

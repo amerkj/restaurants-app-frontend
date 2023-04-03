@@ -1,0 +1,43 @@
+<div class="navbar">
+  <app-logo></app-logo>
+
+  <div ngbDropdown *ngIf="!isLogedIn" display="dynamic">
+    <div
+      class="button button-primary button-lg"
+      id="dropdownForm1"
+      ngbDropdownToggle
+    >
+      login
+    </div>
+    <div ngbDropdownMenu aria-labelledby="dropdownForm1">
+      <div class="px-4 py-3" style="width: 250px">
+        <div class="mb-3">
+          <label for="exampleDropdownFormEmail1">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            placeholder="email@example.com"
+            [(ngModel)]="email"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleDropdownFormPassword1">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Password"
+            [(ngModel)]="password"
+          />
+        </div>
+        <button
+          (click)="login()"
+          type="submit"
+          class="btn btn-primary text-white"
+        >
+          Sign in
+        </button>
+      </div>
+    </div>
+  </div>
+  <button class="button button-primary button-lg" *ngIf="isLogedIn" (click)="logout()">logout</button>
+</div>
